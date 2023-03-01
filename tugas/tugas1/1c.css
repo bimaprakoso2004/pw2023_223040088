@@ -1,0 +1,58 @@
+.Kotak1 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.Kotak2-1 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.Kotak2-2 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.Kotak3-1 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.Kotak3-2 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.Kotak3-3 {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.KotakSatu {
+    text-align: center;
+    line-height: 20px;
+}
+
+.KotakDua {
+    text-align: center;
+    line-height: 20px;
+    display: flex;
+}
+
+.KotakTiga {
+    text-align: center;
+    line-height: 20px;
+    display: flex;
+}
