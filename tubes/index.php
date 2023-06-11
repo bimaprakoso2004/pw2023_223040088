@@ -61,20 +61,14 @@ $product = query("SELECT * FROM product");
                 <div class="main_text">
                     <h1>Beemz<br><span>Collection</span></h1>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
-                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
-                        a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        Beemzstore berdiri sejak kepepet dan akhirnya dapat berkembang hingga sejauh ini 
+                        dengan menampilkan produk yang berkualitas dari generasi ke generasi dengan menjaga
+                        kualitas produk itu sendiri sehingga pelanggan merasa puas dengan produk kami
                     </p>
                 </div>
                 <div class="main_image">
                     <img src="image/shoes.png">
                 </div>
-            </div>
-            <div class="social_icon ">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
 
@@ -93,7 +87,6 @@ $product = query("SELECT * FROM product");
                 <a href="product.php?id_product=<?= $p["id_product"]; ?>" style="text-decoration: none; color: black;">
                 <div class="small_card">
                     <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
                 </div>
 
                 <div class="image">
@@ -113,7 +106,7 @@ $product = query("SELECT * FROM product");
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <a href="#" class="btn">Add To Cart</a>
+                    <a href="" class="btn">Add To Cart</a>
                 </div>
                 </a>
             </div>
@@ -148,22 +141,17 @@ $product = query("SELECT * FROM product");
 
             <div class="about_text">
                 <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
-                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
-                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a 
-                    Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
-                    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
-                    (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
-                    very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes 
-                    from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below 
-                    for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
-                    reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    Web ini dibuat untuk memudahkan para pelanggan setia dari Beemzshoes untuk berbelanja dan melihat produk sepatu yang tersedia dengan banyak promo - promo menarik terntunya. 
+                    Disini kami berusaha menjaga kepuasan dan kenyamanan pelanggan tentunya semoga para pelanggan juga puas dengan pelayanan kami semoga support para pelanggan terus menjadi semangat kami
+                    agar menjadi lebih baik dan meningkatkan pelayanan dari store kami. Web ini juga bertujuan agar Beemzshoes dapat dilihat dan diakses ke penjuru dunia yang sekarang dengan mudah dapat 
+                    diakses melalui internet. Dengan ini Web store kami dibuat untuk kenyamanan dan mempermudaah para pelanggan setia Beemzshoes untuk berbelanja. Terimakasih telah mengunjungi Web store kami.
+                    Kepuasan anda adalah prioritas kami.
                 </p>
             </div>
 
         </div>
 
-        <a href="#" class="about_btn">Shop Now</a>
+        <a href="#Products" class="about_btn">Shop Now</a>
 
         <script>
             function functio(small){
@@ -206,9 +194,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                        Suka banget sama toko sepatu yang satu ini 
+                        karena memiliki berbagai produk yang bagus 
+                        dan tentunya berkualitas
                     </p>
                 </div>
             </div>   
@@ -237,9 +225,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                        Sepatu yang bagus dengan harga yang murah 
+                        tetapi harga tidak murahan doooong semoga 
+                        segera ada update produk terbaru lagipokona mah well
                     </p>
                 </div>
             </div>   
@@ -269,9 +257,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                        Sangat cocok dan trendy dipakai oleh 
+                        mahasiswa ke kampus semoga kedepannya ada 
+                        produk yang lebih keren lagi+
                     </p>
                 </div>
             </div>   
@@ -303,9 +291,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                        AAAA suka banget sama sepatu dari Beemzshoes 
+                        ini produknya keren - keren banget dan
+                        yang pastinya berkualitas
                     </p>
                 </div>
             </div>   
@@ -334,9 +322,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                       Harga terjangkau dan tidak terlalu mahal pas di dompet
+                       sesuai dengan budget pelajar yang senang sekali 
+                       dengan fashion
                     </p>
                 </div>
             </div>   
@@ -365,9 +353,9 @@ $product = query("SELECT * FROM product");
                 </div>
                 <div class="comment">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-                        repellat numquam atque dolores!
+                        Kualitas barang bagus tidak sakit di kaki 
+                        dan nyaman di kaki Beemzshoes the best pokona mah
+                        Beemzshoes sukses terus
                     </p>
                 </div>
             </div>   
@@ -439,7 +427,7 @@ $product = query("SELECT * FROM product");
             </div>
 
             <div class="tag tengah">
-                <h1>Follw Us</h1>
+                <h1>Follow Us</h1>
                 <div class="social_link">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
