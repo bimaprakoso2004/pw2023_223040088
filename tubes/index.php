@@ -1,3 +1,24 @@
+<?php  
+session_start();
+
+
+
+if(!isset($_SESSION['login'])) {
+    header("Location:login.php");
+    exit;
+}
+
+
+require("function.php");
+
+$product = query("SELECT * FROM product");
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +44,11 @@
                 <li><a href="#About">About</a></li>
                 <li><a href="#Review">Review</a></li>
                 <li><a href="#Services">Services</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="logout.php">logout</a></li>
             </ul>
 
-            <div class="icons">
+            <div class="icons" style="z-index:9999;">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
                 <i class="fa-solid fa-user"></i>
@@ -52,11 +75,6 @@
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-            </div>
-            <div class="button">
-                <a href="#">SHOP NOW</a>
-                <i class="fa-solid fa-chevron-right"></i>
             </div>
         </div>
 
@@ -68,24 +86,26 @@
     <div class="products" id="Products">
         <h1>Products</h1>
 
+        
         <div class="box">
+        <?php foreach($product as $p): ?>
             <div class="card">
-
+                <a href="product.php?id_product=<?= $p["id_product"]; ?>" style="text-decoration: none; color: black;">
                 <div class="small_card">
                     <i class="fa-solid fa-heart"></i>
                     <i class="fa-solid fa-share"></i>
                 </div>
 
                 <div class="image">
-                    <img src="image/shoes1.png">
+                    <img src="image/<?= $p["gambar"] ?>">
                 </div>
 
                 <div class="products_text">
-                    <h2>NIKE</h2>
+                    <h2><?= $p["nama_product"]; ?></h2>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        <?= $p["deskripsi"]; ?>
                     </p>
-                    <h3>$100.99</h3>
+                    <h3><?= $p["harga"]; ?></h3>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -95,210 +115,9 @@
                     </div>
                     <a href="#" class="btn">Add To Cart</a>
                 </div>
-
+                </a>
             </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes2.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$200.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes3.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$175.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes4.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$120.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes5.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$150.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes6.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$220.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$110.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-share"></i>
-                </div>
-
-                <div class="image">
-                    <img src="image/shoes7.png">
-                </div>
-
-                <div class="products_text">
-                    <h2>NIKE</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </p>
-                    <h3>$150.99</h3>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="btn">Add To Cart</a>
-                </div>
-
+            <?php endforeach ; ?>
             </div>
 
         </div>
@@ -444,6 +263,7 @@
                                 <i class="fa-regular fa-star"></i>
                             </div>
                         </div>
+                        
 
                     </div>
                 </div>
@@ -567,7 +387,7 @@
                 <i class="fa-solid fa-truck-fast"></i>
                 <h3>Fast Delivery</h3>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Barang mendarat dengan cepat dan selamat
                 </p>
             </div>
 
@@ -575,7 +395,7 @@
                 <i class="fa-solid fa-rotate-left"></i>
                 <h3>10 Days Replacement</h3>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Barang yang tidak sesuai jaminan kembali
                 </p>
             </div>
 
@@ -583,54 +403,12 @@
                 <i class="fa-solid fa-headset"></i>
                 <h3>24 x 7 Support</h3>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Melayani seputar pertanyaan 24x7 admin fast respon
                 </p>
             </div>
         </div>
 
     </div>
-
-
-
-    <!--Login Form-->
-    
-    <div class="login_form">
-        <div class="left">
-            <img src="image/logshoes.png">
-        </div>
-
-        <div class="right">
-
-            <form action="#" method="post">
-                <h1>Welcome Back!</h1>
-
-                <p>User Name</p>
-                <div class="user">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" name="user" placeholder="User Name" class="username">
-                </div>
-
-                <p class="passworg_tag">Password</p>
-                <div class="password">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="text" name="password" placeholder="Password">
-                </div>
-
-                <p class="forget">Forget Password ?</p>
-
-                <button type="submit">Login</button>
-                <div class="loging_icon">
-                    <a href="#"><img src="image/google.png"></a>
-                    <a href="#"><img src="image/facebook.png"></a>
-                    <a href="#"><img src="image/twitter.png"></a>
-                </div>
-
-            </form>
-
-        </div>
-
-    </div>
-
 
 
     <!--Footer-->
@@ -639,9 +417,9 @@
         <div class="footer_main">
             <div class="tag">
                 <h1>Contact</h1>
-                <a href="#"><i class="fa-solid fa-house"></i>123/Colombo/Sri Lanka</a>
-                <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
-                <a href="#"><i class="fa-solid fa-envelope"></i>contact@gmail.com</a>
+                <a href="#"><i class="fa-solid fa-house"></i>Gegerkalong 29</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+62 12 345 6789</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>beemzshoes@gmail.com</a>
             </div>
 
             <div class="tag">
@@ -654,10 +432,10 @@
 
             <div class="tag">
                 <h1>Our Stores</h1>
-                <a href="#" class="center">Sri Lanka</a>
-                <a href="#" class="center">USA</a>
-                <a href="#" class="center">India</a>
-                <a href="#" class="center">Japan</a>
+                <a href="#" class="center">Gegerkalong</a>
+                <a href="#" class="center">Gegerkalong Hilir</a>
+                <a href="#" class="center">Gegerkalong Tengah</a>
+                <a href="#" class="center">Gegerkalong Girang</a>
             </div>
 
             <div class="tag tengah">
@@ -665,19 +443,9 @@
                 <div class="social_link">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>                    
                 </div>
             </div>
-
-            <div class="tag">
-                <h1>Newsletter</h1>
-                <div class="search_bar">
-                    <input type="text" placeholder="You email id here">
-                    <button type="submit">Subscribe</button>
-                </div>
-            </div>
-
         </div>
     </footer>
 
